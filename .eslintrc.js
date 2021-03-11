@@ -19,6 +19,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'linebreak-style': 0,
     'react/react-in-jsx-scope': 'off', // React is no longer needed in scope
     'react/prop-types': 'off',
   },
