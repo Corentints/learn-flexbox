@@ -4,6 +4,8 @@ import FlexPlayGround from '../components/playground/FlexPlayGround';
 import SquaresSelector from '../components/playground/SquaresSelector';
 import ExportCSS from '../components/playground/ExportCSS';
 
+import Navbar from '../components/layout/Navbar';
+
 const PlayGroundPage = () => {
   const [squareCount, setSquareCount] = useState(2);
 
@@ -24,34 +26,37 @@ const PlayGroundPage = () => {
   }
 
   return (
-    <div className="w-full max-w-6xl px-4 py-4 mx-auto h-max-screen sm:px-6 lg:px-8">
-      <FlexProperties
-        flexDirection={flexDirection}
-        setFlexDirection={setFlexDirection}
-        justifyContent={justifyContent}
-        setJustifyContent={setJustifyContent}
-        alignItems={alignItems}
-        setAlignItems={setAlignItems}
-        flexWrap={flexWrap}
-        setFlexWrap={setFlexWrap}
-        alignContent={alignContent}
-        setAlignContent={setAlignContent}
-      />
-      <FlexPlayGround
-        flexProperties={flexProperties}
-        squares={squares}
-      />
-      <div className="flex items-start justify-between py-4">
-        <SquaresSelector
-          squareCount={squareCount}
-          setSquareCount={setSquareCount}
-          squareNumber="5"
+    <>
+      <Navbar />
+      <div className="px-2 mx-auto mt-4 max-w-7xl sm:px-6 lg:px-8">
+        <FlexProperties
+          flexDirection={flexDirection}
+          setFlexDirection={setFlexDirection}
+          justifyContent={justifyContent}
+          setJustifyContent={setJustifyContent}
+          alignItems={alignItems}
+          setAlignItems={setAlignItems}
+          flexWrap={flexWrap}
+          setFlexWrap={setFlexWrap}
+          alignContent={alignContent}
+          setAlignContent={setAlignContent}
         />
-        <ExportCSS
+        <FlexPlayGround
           flexProperties={flexProperties}
+          squares={squares}
         />
+        <div className="flex items-start justify-between py-4">
+          <SquaresSelector
+            squareCount={squareCount}
+            setSquareCount={setSquareCount}
+            squareNumber="5"
+          />
+          <ExportCSS
+            flexProperties={flexProperties}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
