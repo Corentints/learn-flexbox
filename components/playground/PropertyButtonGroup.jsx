@@ -38,6 +38,17 @@ const ButtonsGroup = ({
                 static
                 className="absolute right-0 z-50 w-56 w-full mt-1 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
               >
+                <Menu.Item className="border-none">
+                  <div>
+                    <Button
+                      setOpened={setOpened}
+                      color={color}
+                      propertyName="unset"
+                      currentProperty={currentProperty}
+                      setProperty={setProperty}
+                    />
+                  </div>
+                </Menu.Item>
                 {propertiesName.map((propertyName) => (
                   <Menu.Item className="border-none">
                     <div>
