@@ -1,4 +1,4 @@
-import ButtonsGroup from './ButtonsGroup';
+import ButtonsGroup from './PropertyButtonGroup';
 
 const FlexProperties = ({
   flexDirection, setFlexDirection, flexWrap, setFlexWrap, alignItems, setAlignItems, justifyContent,

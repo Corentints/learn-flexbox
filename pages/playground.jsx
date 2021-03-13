@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import FlexProperties from './components/FlexProperties';
-import FlexPlayGround from './components/FlexPlayGround';
-import SquaresSelector from './components/SquaresSelector';
-import ExportCSS from './components/ExportCSS';
+import FlexProperties from '../components/playground/FlexProperties';
+import FlexPlayGround from '../components/playground/FlexPlayGround';
+import SquaresSelector from '../components/playground/SquaresSelector';
+import ExportCSS from '../components/playground/ExportCSS';
 
-function App() {
+const PlayGroundPage = () => {
   const [squareCount, setSquareCount] = useState(2);
 
   const [flexDirection, setFlexDirection] = useState('row');
@@ -53,6 +53,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
-export default App;
+export default PlayGroundPage;

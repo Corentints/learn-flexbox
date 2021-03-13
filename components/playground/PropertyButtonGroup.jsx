@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from './Button';
+import Button from './PropertyButton';
 
 const ButtonsGroup = ({
   title, color, propertiesName, currentProperty, setProperty,

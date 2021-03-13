@@ -6,7 +6,6 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'plugin:jsx-a11y/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -22,5 +21,6 @@ module.exports = {
     'linebreak-style': 0,
     'react/react-in-jsx-scope': 'off', // React is no longer needed in scope
     'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };
