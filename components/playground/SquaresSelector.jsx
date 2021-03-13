@@ -4,7 +4,7 @@ const SquaresSelector = ({ squareCount, setSquareCount, squareNumber }) => {
     squares.push(<button type="button" className={`flex rounded-md items-center justify-center w-full h-12 sm:h-full font-bold text-white bg-gradient-to-r from-blue-500 to-blue-700 ${squareCount < index ? 'opacity-40' : ''}`} onClick={() => setSquareCount(index)}>{index}</button>);
   }
   return (
-    <div className="flex flex-row gap-5">
+    <div className="flex flex-row space-x-5">
       {squares}
     </div>
   );
