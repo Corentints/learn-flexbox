@@ -3,23 +3,20 @@ import { useState } from 'react';
 
 const ExportCSS = ({ flexProperties }) => {
   const [opened, setOpened] = useState(false);
+
   const camelToSnakeCase = (str) => str.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
-  const exportedCSSHTML = [];
-  let exportedCSS = '';
+
+  const exportedCSSHTML = ['display: flex;'];
+  let exportedCSS = 'display: flex;\n';
+
   Object.entries(flexProperties).forEach(([property, value]) => {
     if (value !== 'unset') {
-      exportedCSS += `${camelToSnakeCase(property)}: ${value};\n`;
-      exportedCSSHTML.push(
-        <div>
-          {camelToSnakeCase(property)}
-          :
-          {' '}
-          {value}
-          ;
-        </div>,
-      );
+      const propertyAndValue = `${camelToSnakeCase(property)}: ${value};`;
+      exportedCSS += `${propertyAndValue};\n`;
+      exportedCSSHTML.push(<span>{propertyAndValue}</span>);
     }
   });
+
   return (
     <div>
       <button type="button" onClick={() => setOpened(!opened)} className="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
