@@ -53,7 +53,7 @@ const ExportCSS = ({ flexProperties }) => {
                         target.innerText = 'copy';
                       }, 2000);
                     }}
-                    className="absolute px-2 py-1 text-white bg-blue-600 rounded-md top-14 right-4"
+                    className="absolute px-2 py-1 text-sm text-white bg-blue-600 rounded-md top-14 right-4"
                   >
                     copy
 
