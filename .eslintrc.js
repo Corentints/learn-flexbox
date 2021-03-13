@@ -22,5 +22,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off', // React is no longer needed in scope
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
   },
 };
