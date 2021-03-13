@@ -34,14 +34,13 @@ const ExportCSS = ({ flexProperties }) => {
 
             <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
-            <div className="inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div className="inline-block w-full px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-gray-800 rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-4" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
               <div>
-                <div className="flex items-center justify-center w-12 h-12 mx-auto bg-green-100 rounded-full">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-
+                <div className="flex items-center justify-center w-12 h-12 mx-auto bg-blue-200 rounded-full">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                 </div>
                 <div className="relative mt-3 text-center sm:mt-5">
-                  <h3 className="text-lg font-medium leading-6 text-gray-900" id="modal-headline">
+                  <h3 className="text-lg font-medium leading-6 text-blue-400" id="modal-headline">
                     Your exported CSS
                   </h3>
                   <button
@@ -58,7 +57,7 @@ const ExportCSS = ({ flexProperties }) => {
                     copy
 
                   </button>
-                  <div className="p-4 mt-4 bg-gray-200 rounded-md">
+                  <div className="p-4 mt-4 bg-gray-300 rounded-md">
                     <code className="text-sm text-left">
                       {exportedCSSHTML.map((css) => (
                         <div>{css}</div>

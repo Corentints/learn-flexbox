@@ -1,14 +1,15 @@
 import ButtonsGroup from './PropertyButtonGroup';
+import SquaresSelector from './SquaresSelector';
 
 const FlexProperties = ({
   flexDirection, setFlexDirection, flexWrap, setFlexWrap, alignItems, setAlignItems, justifyContent,
-  setJustifyContent, alignContent, setAlignContent,
+  setJustifyContent, alignContent, setAlignContent, squareCount, setSquareCount,
 }) => (
-  <div className="grid justify-between w-full grid-cols-3 gap-4 mb-4">
+  <div className="grid justify-between w-full grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
     <ButtonsGroup
       title="flex-direction"
-      color="pink"
-      propertiesName={['column', 'row']}
+      color="blue"
+      propertiesName={['row', 'column']}
       currentProperty={flexDirection}
       setProperty={setFlexDirection}
     />
@@ -23,7 +24,7 @@ const FlexProperties = ({
 
     <ButtonsGroup
       title="align-items"
-      color="blue"
+      color="pink"
       propertiesName={['flex-start', 'flex-end', 'center', 'stretch', 'baseline']}
       currentProperty={alignItems}
       setProperty={setAlignItems}
@@ -43,6 +44,12 @@ const FlexProperties = ({
       propertiesName={['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']}
       currentProperty={alignContent}
       setProperty={setAlignContent}
+    />
+
+    <SquaresSelector
+      squareCount={squareCount}
+      setSquareCount={setSquareCount}
+      squareNumber="5"
     />
   </div>
 );
