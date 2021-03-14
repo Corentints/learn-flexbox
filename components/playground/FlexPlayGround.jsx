@@ -4,7 +4,7 @@ const FlexPlayGround = ({
   flexProperties, squares, setSquares,
 }) => (
   <div
-    className="flex w-full px-2 bg-blue-300 rounded-md"
+    className="flex w-full bg-blue-300 rounded-md"
     style={{
       height: '500px',
       width: '100%',
