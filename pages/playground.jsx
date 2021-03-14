@@ -7,8 +7,6 @@ import Navbar from '../components/layout/Navbar';
 import Hero from '../components/layout/Hero';
 
 const PlayGroundPage = () => {
-  const [squareCount, setSquareCount] = useState(2);
-
   const [flexDirection, setFlexDirection] = useState('row');
   const [justifyContent, setJustifyContent] = useState('flex-start');
   const [alignItems, setAlignItems] = useState('flex-start');
@@ -19,11 +17,17 @@ const PlayGroundPage = () => {
     flexDirection, justifyContent, alignItems, flexWrap, alignContent,
   };
 
-  const squares = [];
-
-  for (let i = 0; i < squareCount; i += 1) {
-    squares.push(<div className="flex items-center justify-center w-24 h-24 m-2 mb-2 font-bold text-white rounded-md bg-gradient-to-r from-blue-500 to-blue-700">{i + 1}</div>);
+  const squaresConfig = [];
+  for (let i = 0; i < 5; i += 1) {
+    squaresConfig.push({
+      width: 24,
+      height: 24,
+      order: null,
+      visible: true,
+    });
   }
+
+  const [squares, setSquares] = useState(squaresConfig);
 
   return (
     <>
@@ -41,12 +45,13 @@ const PlayGroundPage = () => {
           setFlexWrap={setFlexWrap}
           alignContent={alignContent}
           setAlignContent={setAlignContent}
-          squareCount={squareCount}
-          setSquareCount={setSquareCount}
+          squares={squares}
+          setSquares={setSquares}
         />
         <FlexPlayGround
           flexProperties={flexProperties}
           squares={squares}
+          setSquares={setSquares}
         />
         <div className="flex items-start justify-end py-4">
           <ExportCSS

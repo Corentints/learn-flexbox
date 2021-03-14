@@ -3,7 +3,7 @@ import SquaresSelector from './SquaresSelector';
 
 const FlexProperties = ({
   flexDirection, setFlexDirection, flexWrap, setFlexWrap, alignItems, setAlignItems, justifyContent,
-  setJustifyContent, alignContent, setAlignContent, squareCount, setSquareCount,
+  setJustifyContent, alignContent, setAlignContent, squares, setSquares,
 }) => (
   <div className="grid justify-between w-full grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
     <ButtonsGroup
@@ -47,9 +47,8 @@ const FlexProperties = ({
     />
 
     <SquaresSelector
-      squareCount={squareCount}
-      setSquareCount={setSquareCount}
-      squareNumber="5"
+      squares={squares}
+      setSquares={setSquares}
     />
   </div>
 );
