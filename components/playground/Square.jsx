@@ -27,7 +27,7 @@ const Square = ({
 
   return (
     <>
-      <div className={`flex m-1 items-center relative justify-center w-${square.width} h-${square.height} ${square.order ? `order-${square.order}` : ''} font-bold text-white rounded-md bg-gradient-to-r from-blue-500 to-blue-700`}>
+      <div style={{ maxHeight: '484px' }} className={`flex m-2 items-center relative justify-center w-${square.width} h-${square.height} ${square.order ? `order-${square.order}` : ''} font-bold text-white rounded-md bg-gradient-to-r from-blue-500 to-blue-700`}>
         {name}
         <button type="button" className="absolute top-2 right-2" onClick={() => setConfigIsOpen(!configIsOpen)}>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
